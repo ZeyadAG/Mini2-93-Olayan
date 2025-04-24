@@ -1,10 +1,4 @@
-FROM openjdk:25-ea-4-jdk-oraclelinux9
-
-WORKDIR /app
-
-COPY ./ /app
-
-
-EXPOSE 8080
-
-CMD ["java", "-jar", "/app/target/mini2.jar"]
+FROM openjdk:17
+VOLUME /tmp
+COPY target/miniapp.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]

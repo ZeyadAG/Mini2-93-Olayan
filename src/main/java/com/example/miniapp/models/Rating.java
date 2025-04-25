@@ -22,12 +22,12 @@ public class Rating {
     public Rating(Long entityId,
             String entityType,
             Integer score,
-            String comment) {
+            String comment, LocalDateTime ratingDate) {
         this.entityId = entityId;
         this.entityType = entityType;
         this.score = score;
         this.comment = comment;
-        this.ratingDate = LocalDateTime.now();
+        this.ratingDate = ratingDate;
     }
 
     public Rating(String id,
@@ -92,15 +92,4 @@ public class Rating {
         this.ratingDate = ratingDate;
     }
 
-    @Override
-    public String toString() {
-        return "Rating{" +
-                "id='" + id + '\'' +
-                ", entityId=" + entityId +
-                ", entityType='" + entityType + '\'' +
-                ", score=" + score +
-                ", comment='" + comment + '\'' +
-                ", ratingDate=" + ratingDate +
-                '}';
-    }
 }

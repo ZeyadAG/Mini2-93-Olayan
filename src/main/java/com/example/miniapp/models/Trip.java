@@ -28,20 +28,18 @@ public class Trip {
     @OneToOne(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true)
     private Payment payment;
 
-    public Trip() {}
+    public Trip() {
+    }
 
-    public Trip(LocalDateTime tripDate, String origin, String destination, Double tripCost,
-                Captain captain, Customer customer) {
+    public Trip(LocalDateTime tripDate, String origin, String destination, Double tripCost) {
         this.tripDate = tripDate;
         this.origin = origin;
         this.destination = destination;
         this.tripCost = tripCost;
-        this.captain = captain;
-        this.customer = customer;
     }
 
     public Trip(Long id, LocalDateTime tripDate, String origin, String destination, Double tripCost,
-                Captain captain, Customer customer) {
+            Captain captain, Customer customer) {
         this.id = id;
         this.tripDate = tripDate;
         this.origin = origin;

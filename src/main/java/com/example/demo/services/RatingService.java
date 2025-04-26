@@ -27,24 +27,21 @@ public class RatingService {
         return ratingRepository.save(rating);
     }
 
-    public Rating updateRating(String id, Rating updatedRating) {
+     public Rating updateRating(String id, Rating updated) {
 
-        Optional<Rating> maybeExisting = ratingRepository.findById(id);
-        if (maybeExisting.isEmpty()) {
-            return null;
-        }
-
-        Rating existing = maybeExisting.get();
-
-        if (updatedRating.getScore() != null) {
-            existing.setScore(updatedRating.getScore());
-        }
-        if (updatedRating.getComment() != null) {
-            existing.setComment(updatedRating.getComment());
-        }
-        existing.setRatingDate(LocalDateTime.now());
-
-        return ratingRepository.save(existing);
+        return ratingRepository.findById(id)
+                .map(existing -> { 
+                    if (updated.getScore()   != null) existing.setScore(updated.getScore());
+                    if (updated.getComment() != null) existing.setComment(updated.getComment());
+                    existing.setRatingDate(LocalDateTime.now());
+                    return ratingRepository.save(existing);
+                })
+                .orElseGet(() -> {  
+                    updated.setId(id);                 
+                    if (updated.getRatingDate() == null)
+                        updated.setRatingDate(LocalDateTime.now());
+                    return ratingRepository.save(updated);
+                });
     }
 
     public void deleteRating(String id) {

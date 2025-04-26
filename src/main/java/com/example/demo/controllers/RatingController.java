@@ -26,8 +26,8 @@ public class RatingController {
 
     @PutMapping("/update/{id}")
     public Rating updateRating(@PathVariable String id,
-            @RequestBody Rating updatedRating) {
-        return ratingService.updateRating(id, updatedRating);
+                               @RequestBody Rating body) {
+        return ratingService.updateRating(id, body);
     }
 
     @DeleteMapping("/delete/{id}")

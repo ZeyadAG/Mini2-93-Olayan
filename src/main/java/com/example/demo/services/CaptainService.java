@@ -1,8 +1,9 @@
-package com.example.miniapp.services;
+package com.example.demo.services;
 
-import com.example.miniapp.models.Captain;
-import com.example.miniapp.repositories.CaptainRepository;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Captain;
+import com.example.demo.repositories.CaptainRepository;
 
 import java.util.List;
 

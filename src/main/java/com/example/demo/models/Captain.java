@@ -1,4 +1,4 @@
-package com.example.miniapp.models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 
@@ -20,7 +20,8 @@ public class Captain {
     @OneToMany(mappedBy = "captain", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Trip> trips = new HashSet<>();
 
-    public Captain() {}
+    public Captain() {
+    }
 
     public Captain(String name, String licenseNumber, Double avgRatingScore) {
         this.name = name;
@@ -75,4 +76,3 @@ public class Captain {
         this.trips = trips;
     }
 }
-

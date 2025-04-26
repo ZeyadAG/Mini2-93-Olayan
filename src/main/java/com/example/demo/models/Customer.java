@@ -1,4 +1,4 @@
-package com.example.miniapp.models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 
@@ -20,7 +20,8 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Trip> trips = new HashSet<>();
 
-    public Customer() {}
+    public Customer() {
+    }
 
     public Customer(String name, String email, String phoneNumber) {
         this.name = name;

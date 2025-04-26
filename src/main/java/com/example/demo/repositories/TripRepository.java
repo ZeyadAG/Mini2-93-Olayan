@@ -1,7 +1,8 @@
-package com.example.miniapp.repositories;
+package com.example.demo.repositories;
 
-import com.example.miniapp.models.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.models.Trip;
 
 import java.time.LocalDateTime;
 import java.util.List;

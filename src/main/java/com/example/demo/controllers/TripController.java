@@ -1,9 +1,10 @@
-package com.example.miniapp.controllers;
+package com.example.demo.controllers;
 
-import com.example.miniapp.models.Trip;
-import com.example.miniapp.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.models.Trip;
+import com.example.demo.services.TripService;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -47,7 +48,7 @@ public class TripController {
 
     @GetMapping("/findByDateRange")
     public List<Trip> findTripsWithinDateRange(@RequestParam LocalDateTime startDate,
-                                               @RequestParam LocalDateTime endDate) {
+            @RequestParam LocalDateTime endDate) {
         return tripService.findTripsWithinDateRange(startDate, endDate);
     }
 

@@ -1,9 +1,6 @@
-package com.example.miniapp;
+package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Value;
-import com.example.miniapp.models.*;
-import com.example.miniapp.repositories.*;
-import com.example.miniapp.services.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +10,10 @@ import org.springframework.http.*;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.models.*;
+import com.example.demo.repositories.*;
+import com.example.demo.services.*;
 
 import java.lang.reflect.Field;
 import java.time.LocalDateTime;

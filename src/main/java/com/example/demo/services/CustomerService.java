@@ -1,10 +1,10 @@
-package com.example.miniapp.services;
+package com.example.demo.services;
 
-
-import com.example.miniapp.models.Customer;
-import com.example.miniapp.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Customer;
+import com.example.demo.repositories.CustomerRepository;
 
 import java.util.List;
 
@@ -47,4 +47,3 @@ public class CustomerService {
         return customerRepository.findByPhoneNumberStartingWith(prefix);
     }
 }
-

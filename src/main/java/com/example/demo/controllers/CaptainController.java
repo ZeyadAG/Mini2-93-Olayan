@@ -1,9 +1,10 @@
-package com.example.miniapp.controllers;
+package com.example.demo.controllers;
 
-import com.example.miniapp.models.Captain;
-import com.example.miniapp.services.CaptainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.models.Captain;
+import com.example.demo.services.CaptainService;
 
 import java.util.List;
 

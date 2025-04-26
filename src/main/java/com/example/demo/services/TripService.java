@@ -1,10 +1,10 @@
-package com.example.miniapp.services;
+package com.example.demo.services;
 
-
-import com.example.miniapp.models.Trip;
-import com.example.miniapp.repositories.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Trip;
+import com.example.demo.repositories.TripRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -48,4 +48,3 @@ public class TripService {
         return tripRepository.findByCaptainId(captainId);
     }
 }
-

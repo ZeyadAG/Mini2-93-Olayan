@@ -1,7 +1,8 @@
-package com.example.miniapp.repositories;
+package com.example.demo.repositories;
 
-import com.example.miniapp.models.Captain;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.models.Captain;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,8 +1,9 @@
-package com.example.miniapp.repositories;
+package com.example.demo.repositories;
 
-import com.example.miniapp.models.Rating;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
+
+import com.example.demo.models.Rating;
 
 import java.util.List;
 

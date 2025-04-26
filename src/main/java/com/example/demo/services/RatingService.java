@@ -1,9 +1,10 @@
-package com.example.miniapp.services;
+package com.example.demo.services;
 
-import com.example.miniapp.models.Rating;
-import com.example.miniapp.repositories.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Rating;
+import com.example.demo.repositories.RatingRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;

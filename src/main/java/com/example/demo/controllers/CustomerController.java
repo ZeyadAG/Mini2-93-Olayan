@@ -1,9 +1,10 @@
-package com.example.miniapp.controllers;
+package com.example.demo.controllers;
 
-import com.example.miniapp.models.Customer;
-import com.example.miniapp.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.models.Customer;
+import com.example.demo.services.CustomerService;
 
 import java.util.List;
 

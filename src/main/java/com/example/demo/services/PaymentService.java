@@ -1,9 +1,10 @@
-package com.example.miniapp.services;
+package com.example.demo.services;
 
-import com.example.miniapp.models.Payment;
-import com.example.miniapp.repositories.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.models.Payment;
+import com.example.demo.repositories.PaymentRepository;
 
 import java.util.List;
 
@@ -46,4 +47,3 @@ public class PaymentService {
         return paymentRepository.findByAmountGreaterThan(threshold);
     }
 }
-

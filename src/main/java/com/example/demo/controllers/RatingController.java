@@ -1,9 +1,10 @@
-package com.example.miniapp.controllers;
+package com.example.demo.controllers;
 
-import com.example.miniapp.models.Rating;
-import com.example.miniapp.services.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.models.Rating;
+import com.example.demo.services.RatingService;
 
 import java.util.List;
 
